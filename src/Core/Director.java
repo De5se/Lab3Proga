@@ -21,6 +21,20 @@ public class Director extends Artist {
         System.out.println("Director " + getName() + " поднял дирежерскую палочку");
     }
 
+    public void GoDown(int stairs) throws DirectorExeption{
+        if (stairs < 0) {
+            throw new DirectorExeption("stairs is less then 0");
+        }
+        else {
+            System.out.println("Director " + getName() + " спустился вниз со " + stairs + " этажа");
+        }
+
+    }
+
+    public void Shout(){
+        System.out.println("Director " + getName() + " закричал(а)");
+    }
+
     @Override
     public String toString() {
         return "Director '"+ getName() + "' ";

@@ -6,6 +6,9 @@ import Utility.ArtistType;
 public class Main {
 
     public static void main(String[] args) {
+        Poet poet = new Poet("Самоцветик");
+        poet.Shout(" Все уселись на лавочки и приготовились слушать");
+
         Babies babyBoyss = new Babies("Малыши");
         Babies babyGirls = new Babies("Малышки");
 
@@ -17,7 +20,7 @@ public class Main {
 
         Director director = new Director("Гусля", ArtistType.DIRECTOR);
         Orchestra orchestra = new Orchestra("Оркестр");
-        Poet poet = new Poet("Самоцветик");
+
         Poems friendsipPoems = new Poems("Новые стихи о дружбе");
 
         director.StickUp();
@@ -52,6 +55,9 @@ public class Main {
         chorus.Sing();
         chorus.finishPerformance();
 
-
+        director.finishPerformance();
+        int stairs = 2;
+        director.GoDown(stairs);
+        director.Shout();
     }
 }
